@@ -1,0 +1,24 @@
+{
+  "name": "1.sprint",
+  "version": "1.0.0",
+  "description": "<b>Sistema de Organização de Materiais de Escritório<b>",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anamariass/1.Sprint.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/anamariass/1.Sprint/issues"
+  },
+  "homepage": "https://github.com/anamariass/1.Sprint#readme",
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}
