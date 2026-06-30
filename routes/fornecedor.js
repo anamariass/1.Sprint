@@ -17,25 +17,17 @@ router.get('/fornecedores/criar', async (req, res) => {
 
 router.post('/fornecedores/inserir', async (req, res) => {
     try {
-        const dados = await Fornecedor.bulkCreate([
-            {
-                nome: 'Fornecedor Piedade',
-                email: 'piedade@email.com',
-                telefone: '1111-1111',
-                cnpj: '11.111.111/0001-11'
-            },
-            {
-                nome: 'Fornecedor Maispapel',
-                email: 'maispapel@email.com',
-                telefone: '2222-2222',
-                cnpj: '22.222.222/0001-22'
-            }
-        ]);
-
-        res.status(201).json(dados);
-    } catch (erro) {
-        res.status(500).json({ erro: 'Erro ao inserir dados iniciais' });
-    }
+        const dados = await Fornecedor.create({
+                nome: req.body.nome,
+                email: req.body.email,
+                telefone: req.body.telefone,
+                cnpj: req.body.cnpj
+            });
+            res.status(200).json(dados);
+    } catch (error) {
+        console.error('inserirFornecedores error:', error);
+        res.status(500).json({ error: error.message || 'Erro ao cadastrar os dados dos fornecedores' });
+    };
 });
 
 
