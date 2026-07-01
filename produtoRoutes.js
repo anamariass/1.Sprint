@@ -28,8 +28,7 @@ router.post("/produtos/inserir", async (req, res) => {
     }
 });
 
-// READ - Listar todos
-router.get("/produtos/listar", async (req, res) => {
+router.get("/listar", async (req, res) => {
     try {
 
         const dados = await Product.findAll();
@@ -72,7 +71,7 @@ router.get("/produtos/:id", async (req, res) => {
 });
 
 
-router.put("/produtos/atualizar/:id", async (req, res) => {
+router.put("/atualizar/:id", async (req, res) => {
     try {
 
         await Product.update(
@@ -107,7 +106,7 @@ router.put("/produtos/atualizar/:id", async (req, res) => {
 });
 
 
-router.delete("/produtos/excluir/:id", async (req, res) => {
+router.delete("/excluir/:id", async (req, res) => {
     try {
 
         await Product.destroy({
